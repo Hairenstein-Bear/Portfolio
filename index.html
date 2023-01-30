@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<Title>Paul Hair Web Resume</Title>
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="corkBoard">
+			<img id= "businessCard" src="businessCard.jpg" style= "position: relative; left:25px; top:150px; width:75px;">
+			<img id= "postit" src="postitYellow.png" style= "position: relative; left:-25px; top:55px;">
+			<img id= "postit" src="postitPink.png" style= "position: relative; left:105px; top:145px;">
+			<img id= "postit" src="postitBlue.png" style= "position: relative; left:0px; top:22px;">
+		</div>
+		<div id="window"></div>
+		<div id="deskDiv">
+		<div class="clock">
+		<div class="outer-clock-face">
+		<div class="marking marking-one"></div>
+		<div class="marking marking-two"></div>
+		<div class="marking marking-three"></div>
+		<div class="marking marking-four"></div>
+		</div>
+		<div class="inner-clock-face">
+			<div class="hand hour-hand"></div>
+			<div class="hand min-hand"></div>
+			<div class="hand second-hand"></div>
+		</div>
+		</div>
+
+
+
+<img id="lightImage" src="light.png">
+	<div id="introVid">
+	<video id="comp" hidden controls><source src="Commander.mp4" type="video/mp4"></video>
+</div>
+
+
+	<input type="image" id="startButton" src="on.png" height="30px" float="left" object-fit="cover" hidden>
+	<input type="image" id="buttonOff" src="buttonOff.png" height="30px" float="right" object-fit="cover" content-visibility="visible">
+	<button id="lightButton" onclick="toggle('lightImage')"></button>
+	<br>
+	<a href="index.html" style= "display:block; position:absolute; left: 235px; top: 90px; font-size: 20px; transform: rotate(-90deg);">Home</a>
+    <a href="workexperience.html" id="experience" style= "position:absolute; left: 320px; top: 110px; font-size:20px;">Experience</a>
+    <a href="skills.html" style= "display:block;position:absolute; left: 260px; top: 91px; font-size:20px; transform: rotate(-90deg)">Skills</a>
+    <a href="portfolio.html" style="position:absolute; left: 270px; top: 80px; transform: rotate(-90deg); font-size:20px;">Portfolio</a>
+	<a href="about.html" style="position:absolute; left: 320px; top: 85px; font-size:20px;">About</a>
+	<!-- <img src="me.png" width="70" height="90" style = "position:absolute; top: 100px; left:55px;"> -->
+
+	</div>
+<script>
+document.getElementById("buttonOff").addEventListener(
+  "click",
+  () => {
+    document.getElementById("startButton").hidden = false;
+    document.getElementById("comp").hidden = false;
+	document.getElementById("buttonOff").hidden = true;
+	
+  },
+  false
+);
+document.getElementById("startButton").addEventListener(
+  "click",
+  () => {
+    document.getElementById("startButton").hidden = true;
+    document.getElementById("comp").hidden = true;
+	document.getElementById("buttonOff").hidden = false;
+  },
+  false
+);
+
+		function toggle(toggleImg) {
+  var toggle = document.getElementById(toggleImg);
+  if (toggle.style.opacity === "1") {
+	toggle.style.opacity = "0"
+	document.getElementById("experience").transform.translate(50,0);
+    ;
+  } else {
+	toggle.style.opacity = "1"
+    ;
+  }
+} 
+	const secondHand = document.querySelector('.second-hand');
+	const minsHand = document.querySelector('.min-hand');
+	const hourHand = document.querySelector('.hour-hand');
+	function setDate() {
+ 		const now = new Date();
+		
+		 const seconds = now.getSeconds();
+  const secondsDegrees = ((seconds / 60) * 360) + 90;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+		const mins = now.getMinutes();
+  const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+		const hour = now.getHours();
+		const hourDegrees = ((hour / 12) *360) +((mins/60)*30)+90;
+		hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+	}
+	setInterval(setDate, 1000);
+
+	setDate();
+// const exp = document.querySelector('experience');
+// exp.addEventListener.click = exp.transform.translate(50,0);
+
+</script>
+</div>
+</div>
+</body>
+</html>           
