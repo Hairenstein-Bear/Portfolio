@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+	background-image: url("wallpaper.jpg");
+	background-size: contain;
+	background-repeat: repeat-x;
+	margin-bottom: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden; 
+	min-height: 100vh;
+	min-width: 100vh;
+	margin: auto;
+}
+
+#wrapper {
+    margin:auto;
+    width: 1020px;
+	max-height: 100vh;
+}
+#projectWrap{
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 45em;
+    width: 100vw;
+    left: -75.5%;
+    flex-wrap: wrap;
+}
+.project{
+    display: flex;
+    position: relative;
+    border: 3px black solid;
+    box-shadow: 4px 4px 4px 4px black;
+    background-color: white;
+    height:15em;
+    width:50em;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5em;
+
+}
+.project:hover{
+    transform: scale(95%);
+    box-shadow: none;
+}
+.projectText{
+    width:60%;
+}
+.project h2{
+    text-decoration: underline;
+}
+#headerWrap{
+    position: relative;
+    margin-top: 5em;
+    border: 3px black solid;
+    box-shadow: 4px 4px 4px 4px black;
+    background-color: white;
+}
+#headerWrap h1{
+    text-align: center;
+    min-width: 100%;
+}

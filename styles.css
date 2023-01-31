@@ -4,25 +4,13 @@ body{
 	background-size: contain;
 	background-repeat: repeat-x;
 	margin-bottom: 0px;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	overflow-y: hidden; 
 	min-height: 100vh;
 	min-width: 100vh;
 	margin: auto;
 }
 
-
-/*  @media only screen and (max-width: 400px) {
-	body {
-	  overflow-x: scroll;
-	  background-size: cover;
-	  margin-left:200px;
-	}
-	#deskdiv{
-		max-height: 495px;
-		max-width: 550px;
-	}
-  } */
 #wrapper {
     margin:auto;
     width: 1020px;
@@ -103,10 +91,23 @@ body{
 	height: 250px;
 	width: 370px;
 	top:150px;
-	left:-300px;
+	left:-100px;
 	z-index:5;
 }
-
+/* .postit input[type=checkbox] {
+    display: none
+  }
+  
+  .postit img {
+    margin: 100px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in
+  }
+  
+  .postit input[type=checkbox]:checked~img {
+    transform: scale(2);
+    cursor: zoom-out
+  } */
 #postit {
 	height: 80px;
 	transition:transform 0.25s ease;
@@ -376,7 +377,57 @@ footer div{
 	top: 450px;
 	left: 1140px;
 }
+#projectWrap{
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 45em;
+    width: 100vw;
+    left: -75.5%;
+    flex-wrap: wrap;
+}
+.project{
+    display: flex;
+    position: relative;
+    border: 3px black solid;
+    box-shadow: 4px 4px 4px 4px black;
+    background-color: white;
+    height:15em;
+    width:50em;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5em;
 
+}
+.project:hover{
+    transform: scale(95%);
+    box-shadow: none;
+}
+.projectText{
+    width:60%;
+}
+.project h2{
+    text-decoration: underline;
+}
+#headerWrap{
+    position: relative;
+    margin-top: 5em;
+    border: 3px black solid;
+    box-shadow: 4px 4px 4px 4px black;
+    background-color: white;
+}
+#headerWrap h1{
+    text-align: center;
+    min-width: 100%;
+}
+@media only screen and (min-width: 2500px){
+	#corkboard{
+	left:-300px;
+	}
+}
 @media only screen and (max-width: 900px) {
 	body {
 	  overflow-x: scroll;
