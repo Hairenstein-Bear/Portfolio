@@ -1,98 +1,195 @@
-
-body{
-	background-image: url("wallpaper.jpg");
-	background-size: contain;
-	background-repeat: repeat-x;
-	margin-bottom: 0px;
-	/* overflow-x: hidden; */
-	overflow-y: hidden; 
-	min-height: 100vh;
-	min-width: 100vh;
-	margin: auto;
+*{
+	/* border: solid 1px blue; */
+	margin: 0;
+	padding: 0;
 }
 
 #wrapper {
-    margin:auto;
-    width: 1020px;
-	max-height: 100vh;
-}
-
-#deskDiv{
-	background-image: url("resume-background.png");
 	position: relative;
-	padding: 0px;
+	top:0%;
+	left:0%;
+	background-image: url("wallpaper.jpg");
+    margin:auto;
+    width: 100vw;
+	height: 100vh;
 	background-size: contain;
-	background-repeat: no-repeat;
-	left:150px;
-	top: -350px;
-	height: 800px;
-	width: 1000px;
-	z-index:5;
+	background-repeat: repeat-x;
+	overflow-x: hidden;
+	
 }
+#pageWrap{
+	position: relative;
+	top:0%;
+    margin:auto;
+    width: 100%;
+	height: 100vh;
+}
+#deskDiv{
+	background-image: url('resume-background.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	position: relative;
+	top:0em;
+	height: 40em;
+	width: 70em;
+	z-index:5;
+	
+}
+#deskDiv a{
+	color:black;
+	text-decoration: none;
+	font-size: 1.2em;
+	display: block;
+}
+#deskDiv a:hover{
+	font-weight: bold;
 
+}
+#desk{
+	position: relative;
+}
+#navWrap{
+	display: flex;
+	position: relative;
+	left:28.3em;
+	top:-18.8em;
+	width:10.8em;
+	height: 5em;
+	align-items: flex-end;
+	flex-direction: row;
+	font-size: .9em;
+}
+#navVertical{
+	justify-content: initial;
+	position: relative;
+	width: 5.8em;
+	height: 4.3em;
+	top:-.2em;
+	transform: rotate(-90deg);
+}
+#navVertical a{
+	display:inline; 
+	position:relative; 
+}
+#navHorizontal{
+	position: relative;
+	width:8em;
+	height:3em;
+	top:.3em;
+}
+#topHome{
+	position: relative;
+	padding: 2.8em;
+	width: 100%;
+	height: 30%;
+	top:0%;
+	left:0%;
+	display: flex;
+	align-items: center;
+	justify-content:space-evenly;
+	flex-direction: row;
+	flex-wrap:nowrap;
+}
+#bottomHome{
+	position: relative;
+	width: 100%;
+	height: 45%;
+	top:0%;
+	left:0%;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
 #introVid {
-	position:absolute; 
-	left:460px; 
-	top:195px;
-	object-fit: fill;		
+	display: inline-block;
+	position:relative; 
+	left:6.6em;
+	top:-7.1em;
+	height: 8em;
+	width: 13em;
 }
 #comp {
-	width:238px;
-	height:140px;
-	object-fit: fill;
+	width:100%;
+	height:100%;
 }
-#buttonOff {
-	background-image: "buttonOff.png";
-	position: absolute;
-	left: 670px;
-	top: 343px;
-	height: 22px;
-	opacity: 1;
-}
+
+
 #startButton {
-	position: absolute;
-	left: 664px;
-	top: 339px;
-	
+	position: relative;
 }
 #startButton img {
 
     width:  30px;
     height: 30px;
     object-fit: cover;	
-	
 }
 #lightButton {
 	position: absolute;
 	float: left;
 	background-color: black;
-	height:14px;
-	width: 16px;
-	left: 135px;
-	top: 390px;
+	height:1em;
+	width: 1em;
 	z-index: 3;
-	transform: rotate(-90deg);
+	left:23.4em;
 }
 #lightImage {
+	display: inline;
 	background-image: url("light.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	position: absolute;
-	left: 208px;
-	top: 265px;
-	height:174px;
-	width:380px;
+	position: relative;
+	left:13.5em;
+	top:-2.6em;
+	height:9.5em;
+	width:20.9em;
 	opacity: 0;
+}
+#lightswitchWrap{
+	display:inline; 
+	position:relative; 
+	top:-15em;
+	left:10em;
+}
+.lightswitch{
+	width:3em;
+}
+#buttonWrap{
+	display: inline;
+	position: relative;
+	top:-2.2em;
+	left:4.6em;
+	width: 2em;
+}
+#buttonOff {
+	background-image: "buttonOff.png";
+	position: relative;
+	left:.5em;
+	height: 22px;
+	opacity: 1;
 }
 #corkBoard {
 	background-image: url("corkboardImage.png");
-	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
-	height: 250px;
-	width: 370px;
-	top:150px;
-	left:-100px;
-	z-index:5;
+	height: 14.5em;
+	width: 21em;
+	z-index:16;
+
+}
+#corkBoardWrap{
+	position: relative;
+	top:0%;
+	height: 14.5em;
+	width: 21em;
+	display: flex;
+	align-items: initial;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 /* .postit input[type=checkbox] {
     display: none
@@ -108,45 +205,43 @@ body{
     transform: scale(2);
     cursor: zoom-out
   } */
-#postit {
-	height: 80px;
+.postit {
+	position: relative;
+	height: 3em;
 	transition:transform 0.25s ease;
+	padding: .5em;
+	margin:1.5em;
 }
-#postit:hover {
-    transform:scale(4) translate(0%, 30%);
+.postit:hover {
+    transform:scale(5) translate(0%, 30%);
+	z-index: 15;
 }
 #businessCard {
 	transition:transform 0.25s ease;
 }
 #businessCard:hover {
-	transform:scale(4.5) translate(10%, 30%);
+	transform:scale(5) translate(10%, 30%);
 }
 #window{
-	background-image: url("windowCat.gif");
 	position: relative;
-	background-repeat: no-repeat;
-	background-size: contain;
 	z-index: 10;
-	height: 320px;
-	width: 350px;
-	left: 1300px;
-	top: -100px;
+	height: fit-content;
+	width: fit-content;
 } 
-
+#window img{
+	width:20em;
+}
 .clock {
 	width: 8rem;
 	height: 8rem;
 	position: relative;
-	left: 40px;
-	top:-200px;
 	padding: 0rem;
-	border: 7px solid white;
+	border: 7px solid rgb(139, 137, 137);
 	box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
 				inset 4px 4px 10px rgba(0,0,0,0.5),
 				inset -4px -4px 10px rgba(67,67,67,0.5),
 				4px 4px 10px rgba(0,0,0,0.3);
 	border-radius: 50%;
-	margin: 50px auto;
 }
 .outer-clock-face {
 	position: relative;
@@ -251,39 +346,29 @@ body{
 	background-image: url("windowCat.gif");
 	position: relative;
 	background-repeat: no-repeat;
-	top:-50px;
-	left:-2000px;
+	top:-25em;
 	height: 230px;
 	width: 350px;
 	background-size: cover;
 	z-index: 10;
 }
 #empHistory{
-	background-image: url("whiteboard.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin-left: 400px;
-	margin-top: 50px;
-	width: 1100px;
-	left: 150px;
-	height: 600px;
+	position: relative;
+	top: -20em;
+	width: 80em;
+	left: 23.5em;
+	height: 40em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 #empTable {
 	position: relative;
-	display: flex;
-	width: 1100px;
-	top: -20px;
-	height: 600px;
-	padding: 0;
-	margin-right: 0px;
-	align-items: center;
-	justify-content: center;
+	width: 80em;
+	height: fit-content;
 }
 #empTable table{
-	width: 1000px;
+	width: 80em;
 	height: 500px;
 	position: relative;
 
@@ -292,7 +377,7 @@ body{
 	border: 3px solid;
 	margin: auto;
 	top: 300px;
-	width: 500px;
+	width: 40em;
 	height: 50px;
 	text-align: center;
 
@@ -308,51 +393,46 @@ body{
 	font-size: .625em;
 }
 #container {
-		width:2600px;
+	position: relative;
+	left:-31em;
+		width: 100vw;
+		height: 100vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 }
+
 footer div{
-	margin-top:500px;
+	position: relative;
+	top:-10em;
 
 }
-#skills{
-	margin-top: 650px;
-}
-#corner {
-	background-image: url("corner.png");
-	position: absolute;
-	background-repeat: no-repeat;
-	background-size: contain;
-	padding: 0%;
-	margin-left: 0px;
-	left:840px;
-	top:-239px;
-	height: 8000px;
-	width:1600px;
-	transform: rotate3d(-0.025,4,0,.21turn);
-	z-index: -1;
+#skillsContainer{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly
 }
 #shelfContainer{
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height:500px;
-	width:2500px;
-	top: 50px;
+	flex-wrap:wrap;
+	flex-direction: row;
+	height: fit-content;
+	width:100vw;
 }
 #shelf{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 5px;
+
 	background-image: url("shelf.png");
 	background-repeat: no-repeat;
 	background-size:contain;
 	width:550px;
 	height:500px;
-	margin: auto;
 }
 #shelf img{
 	position: relative;
@@ -361,31 +441,58 @@ footer div{
 	top: 100px;
 	left: 40px;
 }
-.left{
-	left:-500px;
-}
-/* #logo{
-	height: 150px;
+#skillLeft{
+	background-color: white;
+	border: solid 4px black;
+	display: inline;
 	position: relative;
-	margin-top: 0;
-	margin-bottom: 0;
-	top:80px;
-	left:20px;
-} */
+	width:20em;
+	height: 13em;
+	left: 10.5em;
+	top: -25em;
+	text-align: center;
+}
+#skillLeft li:hover{
+	font-size: x-large;
+	transition: ease .5s;
+}
+#skillRight{
+	background-color: white;
+	border: solid 4px black;
+	display: inline;
+	position: relative;
+	width:20em;
+	height: 13em;
+	top: -25em;
+	left:-14.5em;
+	text-align: center;
+}
+#skillRight li:hover{
+	font-size: x-large;
+	transition: ease .5s;
+}
 #award{
-	position: absolute;
-	top: 450px;
-	left: 1140px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	flex-direction: row;
+	position: relative;
+	width: 28em;
+	left:-2em;
+	top:-15em;
+}
+#award img{
+	height:10em;
+	margin:0;
 }
 #projectWrap{
     position: relative;
-    /* background-color: aqua; */
     display: flex;
     align-items: center; 
     justify-content: center;
-    height: 45em;
+    height: 53em;
+	top:0em;
     width: 100vw;
-    left: -75.5%;
     flex-wrap: wrap;
 }
 .project{
@@ -394,12 +501,15 @@ footer div{
     border: 3px black solid;
     box-shadow: 4px 4px 4px 4px black;
     background-color: white;
-    height:15em;
+    height:14em;
     width:50em;
+	top:-2em;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 5em;
+    margin: 1.75em;
+	margin-top: 0em;
+	margin-bottom: 1em;
 
 }
 .project:hover{
@@ -408,13 +518,15 @@ footer div{
 }
 .projectText{
     width:60%;
+	font-size: .9em;
 }
 .project h2{
     text-decoration: underline;
 }
 #headerWrap{
+	width: 100vw;
     position: relative;
-    margin-top: 5em;
+	top: 0em;
     border: 3px black solid;
     box-shadow: 4px 4px 4px 4px black;
     background-color: white;
@@ -423,22 +535,366 @@ footer div{
     text-align: center;
     min-width: 100%;
 }
-@media only screen and (min-width: 2500px){
-	#corkboard{
-	left:-300px;
+
+#aboutWrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:75%;
+}
+#aboutText{
+	box-shadow: 2px 2px 2px 2px black;
+	/* border:.3em solid black; */
+	background-color: white;
+	font-size: 1.5em;
+	text-align: center;
+	width: 65%;
+	margin:.5em;
+}
+@media only screen and (max-width: 1700px){
+	.project{
+		height: 20em;
+		width: 40em;
+		font-size: .75em;
+	}
+	.project img{
+		width: 10em;
+	}
+	#shelf{
+		width:350px;
+		height:500px;
+	}
+	#shelf img{
+		height: 80px;
+		top: 70px;
+		left: 20px;
+	}
+	#award{
+		width: 20em;
+		top:-20em;
+		left: 0em;
+	}
+	#award img{
+		height:7em;
+		margin:0;
+	}
+	#skillRight{
+		left:-10em;
+
+		margin-left: 10em;
+		width: 13.5em;
+	}
+	#skillLeft{
+
+		width:14em;
+		margin-right: 10em;
+		height: fit-content;
+	}
+}
+@media only screen and (max-width: 1500px){
+	#aboutText{
+		font-size: 1em;	
+	} 
+
+}
+@media only screen and (max-width: 1200px) {
+	#corkBoard{
+		height: 10.5em;
+		width: 15.5em;
+	}
+	#corkBoardWrap{
+		height: 10.5em;
+		width:15.5em;
+	}
+	.postit{
+		margin:.5em;
+		padding:0.5em;
+	}
+	.clock{
+		width:5em;
+		height:5em;
+	}
+	#window img{
+		width: 15em;
+	}
+	#deskDiv{
+		width:50em;
+	}
+	#lightswitchWrap{
+		left: 0em;
+	}
+	#introVid{
+		left: -3.3em;
+	}
+	#navWrap{
+		left: 17.2em;
+	}
+	#buttonWrap{
+		left: -5.5em;
+	}
+	#lightButton{
+		left: 11.4em;
+	}
+	#lightImage{
+		left: 3.5em;
+	}
+	#empTable {
+		background-image: none;
+		position: relative;
+		width: fit-content;
+		height: fit-content;
+	}
+	#empTable table{
+		width: 40em;
+		height: 500px;
+		position: relative;
+		font-size: 1.2em;
+	}
+	#projectWrap{
+		top:10%;
+	}
+	.project{
+		position: relative;
+		top:-8em;
+		font-size: .7em;
+	}
+	#headerWrap{
+		top:-8em;
+	}
+	#shelf{
+		width:250px;
+
+	}
+	#shelf img{
+		height: 55px;
+		top: 50px;
+		left: 15px;
+	}
+	#award{
+		width: 18em;
+		top:-25em;
+		left: 0em;
+	}
+	#award img{
+		height:6.5em;
+		margin:0;
+	}
+	#skillsContainer h2{
+		font-size:1.3em;
+	}
+	#skillRight{
+		font-size: .8em;
+		left:0em;
+		top: -30em;
+		margin-left: 0em;
+		width: 12em;
+	}
+	#skillLeft{
+		font-size:.8em;
+		left:0em;
+		top: -30em;
+		width:12em;
+		margin-right: 0em;
+		height: fit-content;
 	}
 }
 @media only screen and (max-width: 900px) {
-	body {
-	  overflow-x: scroll;
-	  background-size: cover;
-	  margin-left:400px;
+	#deskDiv{
+		background-size: 80%;
+		width:45em;
 	}
-	footer{
+	.lightswitch{
+		width: 2em;
+	}
+	#corkBoard{
+		height:8.5em;
+		width: 12.5em;
+	}
+	#corkBoardWrap{
+		height: 8.5em;
+		width: 12.5em;
+	}
+	#window img{
+		width:12em;
+	}
+	.postit{
+		height: 2em;
+	}
+	#introVid{
+		display: inline;
+	left:-2.3em;
+	top:-6.3em;
+	height: 7em;
+	width: 11.4em;
+	}
+	#lightButton{
+		left: 10.6em;
+	}
+	#buttonWrap{
+		left: -4em;
+		top:-2em;
+	}
+	#deskDiv a{
+		font-size: 1.1em;
+	}
+	#navWrap{
+		top: -16.7em;
+		left: 15.6em;
+		width: 9.5em;
+	}
+	#navVertical{
+		height: 4em;
+		width: 6.2em;
+	}
+	#navHorizontal{
+		top:.6em;
+	}
+	#lightImage{
+		top:-2.3em;
+		left:3.7em;
+		height:8.4em;
+		width:18.2em;
+		opacity: 1;
+	}
+	#wrapper{
+		background-size: cover;
+	}
+	#avatar img{
+		width:15em;
+	}
+	#aboutText{
+		font-size: 1em;
 		position: relative;
-		left:900px;
+		top:6em;
+	}
+	#empTable table{
+		width: 40em;
+		height: 500px;
+		position: relative;
+		font-size: 1.1em;
+		left:3em;
+	}
+	#shelf{
+		width:200px;
+	}
+	#shelf img{
+		height: 40px;
+		top: 40px;
+	}
+	#award{
+		top:-15em;
+	}
+	#skillLeft{
+		top: -25em;
+		width: 10em;
+	}
+	#skillRight{
+		width: 10em;
+		top:-25em;
+		left:0em;
+	}
+}
+@media only screen and (max-width:720px) {
+	#deskDiv{
+		width: 40em;
+	}
+	#deskDiv a{
+		display: block;
+		font-size: .8em;
+	}
+	#navWrap{
+		left: 11.7em;
+		top:-14.3em;
+	}
+	#navHorizontal{
+		top:1.6em;
+		left:-.1em;
+	}
+	#navVertical{
+		height: 3em;
+		left:.4em;
+	}
+	#corkBoard{
+		position: relative;
+		left:-3em;
+		width: 8.75em;
+		height:6em;
+	}
+	#corkBoardWrap{
+		width: 8.75em;
+		height: 6em;
+	}
+	.postit{
+		height: 1.7em;
+		padding: 0;
+		margin:.5em;
+	}
+	.postit:hover{
+		transform: scale(7);
+	}
+	.clock{
+		left:-3em;
+		width: 4em;
+		height: 4em;
 	}
 	#window{
-		left: 1000px;
+		left:-3em;
 	}
+	#window img{
+		width: 10em;
+	}
+	#lightswitchWrap{
+		left:-7em;
+	}
+	#lightButton{
+		left:8.5em;
+	}
+	#lightImage{
+		top: -1.7em;
+		left: 1.2em;
+		height:6.5em;
+		width: 14.5em;
+	}
+	#introVid{
+		left: -3.6em;
+		width: 9em; 
+		height: 5.5em;
+		top: -5em;
+	}
+	#buttonWrap{
+		left:-5.4em;
+		top: -1.5em;
+	}
+	#empTable table{
+		top:5em;
+		width: 20em;
+		height: 500px;
+		position: relative;
+		font-size: 1em;
+		left:5em;
+	}
+	#aboutText{
+		font-size: .75em;
+		position: relative;
+		top:6em;
+	}
+	#shelfContainer{
+		height: 10em;
+	}
+	#shelf{
+		margin-left: 1em;
+	}
+	#award{
+		top:-15em;
+	}
+	#skillLeft{
+		top: -25em;
+		width: 10em;
+	}
+	#skillRight{
+		width: 10em;
+		top:-45em;
+		left:-11.7em;
+	}
+	
 }
